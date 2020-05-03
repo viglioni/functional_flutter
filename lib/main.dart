@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import './pages/home.dart';
 import 'package:flutter/foundation.dart';
@@ -8,11 +9,10 @@ import './states/states.dart';
 import './aux_funcs/aux_funcs.dart';
 
 
-void main() => runApp(builder());
-
+//void main() => runApp(builder());
 
 Widget builder(){
-  final store = Store<Map>(appReducer, initialState: {"counter": 1, "startUpName" :  getRandomStartUpName()});
+  final store = Store<Map>(stateReducer, initialState: {"counter": 1, "startUpName" :  getRandomStartUpName()});
   return StoreProvider<Map>(
     store: store,
     child: MaterialApp(
@@ -27,11 +27,11 @@ Widget builder(){
 
 
 // uncomment for development - using class MyApp allows hot reload
-// void main() => runApp(MyApp());
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) => builder();
-// }
+void main() => runApp(MyApp());
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) => builder();
+}
 
 
 
