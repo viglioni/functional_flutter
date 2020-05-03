@@ -1,6 +1,6 @@
 # About
 
-A simple app with two states: a random startup name generator and a counter of how many times the user hits "get new name" button.
+A simple app with two global states: a random startup name generator and a counter of how many times the user hits "get new name" button.
 
 This app uses [Redux](https://pub.dev/packages/redux) for managing states and [English Words](https://pub.dev/packages/english_words) lib to generate the name.
 
