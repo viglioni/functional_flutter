@@ -1,16 +1,12 @@
-# myapp
+# About
 
-A new Flutter project.
+A simple app with two states: a random startup name generator and a counter of how many times the user hits "get new name" button.
 
-## Getting Started
+This app uses [Redux](https://pub.dev/packages/redux) for managing states and [English Words](https://pub.dev/packages/english_words) lib to generate the name.
 
-This project is a starting point for a Flutter application.
+This app uses no classes - except the default ones.
 
-A few resources to get you started if this is your first Flutter project:
+# screenshots
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![](https://github.com/Viglioni/two_state_app/blob/master/screenshots/Screen%20Shot%202020-05-02%20at%2023.32.24.png)
+![](https://github.com/Viglioni/two_state_app/blob/master/screenshots/Screen%20Shot%202020-05-02%20at%2023.32.35.png)
