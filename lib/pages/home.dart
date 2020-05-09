@@ -26,7 +26,10 @@ Widget randomName() => Column(
 
 final generatedName = useStateWidget(
   "startUpName",
-  (startUpName)=>Text(startUpName,style: TextStyle(fontSize: 48)));
+  (startUpName) => Text(
+    startUpName,
+    style: TextStyle(fontSize: 48, )));
+
 
 final namesCounter = useStateWidget(
   "counter",
@@ -35,19 +38,17 @@ final namesCounter = useStateWidget(
     child: Text( "you have read: $counter names",
       style: TextStyle(fontSize: 11 ))));
 
-final getNewNameButton = setStateWidget(
+
+final getNewNameButton =  setStateWidget(
   StateActions.GetNewName,
-  (callbackAction) => RaisedButton(
-    onPressed: callbackAction,
+  (callback) => RaisedButton(
+    // Attach the `callback` to the `onPressed` attribute
+    onPressed: callback,
     color: Colors.purple,
     child: Padding(
       padding: EdgeInsets.all(10.0),
       child: Text(
         "Get a new name",
-        style: TextStyle(fontSize: 30, color: Colors.white)))));
-
-
-
-
-
+        style: TextStyle(fontSize: 30, color: Colors.white),
+      ))));
 

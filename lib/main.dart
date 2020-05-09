@@ -12,7 +12,7 @@ import './aux_funcs/aux_funcs.dart';
 void main() => runApp(builder());
 
 Widget builder(){
-  final store = Store<Map>(stateReducer, initialState: {"counter": 1, "startUpName" :  getRandomStartUpName()});
+  final store = initializeState({"counter": 1, "startUpName" :  getRandomStartUpName()});
   return StoreProvider<Map>(
     store: store,
     child: MaterialApp(
@@ -26,7 +26,7 @@ Widget builder(){
 }
 
 
-// uncomment for development - using class MyApp allows hot reload
+// // uncomment for development - using class MyApp allows hot reload
 // void main() => runApp(MyApp());
 // class MyApp extends StatelessWidget {
 //   @override
