@@ -188,13 +188,13 @@
       "languageVersion": "2.3"
     },
     {
-      "name": "myapp",
+      "name": "functionalflutter",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2020-05-09T20:17:27.123107Z",
+  "generated": "2020-05-09T23:43:25.026235Z",
   "generator": "pub",
   "generatorVersion": "2.7.2"
 }

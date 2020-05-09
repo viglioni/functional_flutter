@@ -1,13 +1,12 @@
-
 import 'package:flutter/material.dart';
-import './pages/home.dart';
+import './routes/startup_name.dart';
 import 'package:flutter/foundation.dart';
 import 'dart:developer';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 import './states/states.dart';
 import './aux_funcs/aux_funcs.dart';
-
+import './routes/routes.dart';
 
 void main() => runApp(builder());
 
@@ -15,13 +14,7 @@ Widget builder(){
   final store = initializeState({"counter": 1, "startUpName" :  getRandomStartUpName()});
   return StoreProvider<Map>(
     store: store,
-    child: MaterialApp(
-      title: 'appzera',
-      theme: ThemeData(
-        primaryColor: Colors.purple,
-      ),
-      home: HomePage()
-    )
+    child: routes
   );
 }
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 import 'package:meta/meta.dart';
-import '../aux_funcs/aux_funcs.dart';
+import 'package:functionalflutter/aux_funcs/aux_funcs.dart';
 import 'package:flutter/material.dart';
 
 
