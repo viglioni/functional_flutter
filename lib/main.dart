@@ -8,11 +8,11 @@ import './states/states.dart';
 import './aux_funcs/aux_funcs.dart';
 
 
-//void main() => runApp(builder);
+void main() => runApp(builder());
 
 
-Widget builder(BuildContext context){
-  final store = Store<Map>(appReducer, initialState: {"counter": 1, "startUpName" :  getRandomStartUpName()});
+Widget builder(){
+  final store = initializeState({"counter": 1, "startUpName" :  getRandomStartUpName()});
   return StoreProvider<Map>(
     store: store,
     child: MaterialApp(
@@ -20,18 +20,18 @@ Widget builder(BuildContext context){
       theme: ThemeData(
         primaryColor: Colors.purple,
       ),
-      home: HomePage(context)
+      home: HomePage()
     )
   );
 }
 
 
-// uncomment for development - using class MyApp allows hot reload
-void main() => runApp(MyApp());
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) => builder(context);
-}
+// // uncomment for development - using class MyApp allows hot reload
+// void main() => runApp(MyApp());
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) => builder();
+// }
 
 
 

@@ -4,10 +4,12 @@ import 'package:meta/meta.dart';
 import '../aux_funcs/aux_funcs.dart';
 import 'package:flutter/material.dart';
 
+
+Function initializeState = (Map stateMap) => Store<Map>(appReducer, initialState: stateMap);
+
 enum StateActions { GetNewName, CounterPP }
 
 Map appReducer (Map state, dynamic action) {
-  
   switch(action){
     case StateActions.GetNewName: {
       return {...state, "counter" : state["counter"] + 1, "startUpName" : getRandomStartUpName() };

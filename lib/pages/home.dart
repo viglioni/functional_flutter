@@ -7,18 +7,18 @@ import '../states/states.dart';
 
 
 
-Scaffold HomePage(context) => Scaffold(
+Scaffold HomePage() => Scaffold(
   appBar: AppBar(title: Text("random startup names")),
   body: Center(
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
-      children:[ randomName(context)],
+      children:[ randomName()],
     )
   ),
 );
 
-Widget randomName(context){
+Widget randomName(){
   return Column(
     children: [
       generatedName,
