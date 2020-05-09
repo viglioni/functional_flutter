@@ -7,61 +7,18 @@ import '../states/states.dart';
 
 
 
-Scaffold HomePage() => Scaffold(
+Scaffold HomePage(context) => Scaffold(
   appBar: AppBar(title: Text("random startup names")),
   body: Center(
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
-      children:[ randomName()],
+      children:[ randomName(context)],
     )
   ),
 );
 
-
-final generatedName = StoreConnector<Map,String>(
-  converter: (store) => store.state["startUpName"],
-  builder: (context, startUpName) => Text(
-    startUpName,
-    style: TextStyle(fontSize: 48, ),
-  )
-);
-
-final namesCounter = StoreConnector<Map, String>(
-  converter: (store) => store.state["counter"].toString(),
-  builder: (context, count) {
-    return Padding(
-      padding: EdgeInsets.all(10.0),
-      child:
-      Text(
-        "you have read: $count names",
-        style: TextStyle(fontSize: 11 )
-      )
-    );
-  },
-);
-
-final getNewNameButton = StoreConnector<Map, VoidCallback>(
-  converter: (store) {
-    return () => store.dispatch(StateActions.GetNewName);
-  },
-  builder: (context, callback) {
-    return RaisedButton(
-      // Attach the `callback` to the `onPressed` attribute
-      onPressed: callback,
-      color: Colors.purple,
-      child: Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Text(
-          "Get a new name",
-          style: TextStyle(fontSize: 30, color: Colors.white),
-        )
-      )
-    );
-  },
-);
-
-Widget randomName(){
+Widget randomName(context){
   return Column(
     children: [
       generatedName,
@@ -72,7 +29,34 @@ Widget randomName(){
 }
 
 
+final generatedName = useStateWidget(
+  "startUpName",
+  (startUpName) => Text(
+    startUpName,
+    style: TextStyle(fontSize: 48, )));
 
 
+final namesCounter = useStateWidget(
+  "counter",
+  (counter) => Padding(
+    padding: EdgeInsets.all(10.0),
+    child: Text( "you have read: $counter names",
+      style: TextStyle(fontSize: 11 ))));
 
+
+final getNewNameButton =  setStateWidget(
+  StateActions.GetNewName,
+  (callback) => RaisedButton(
+    // Attach the `callback` to the `onPressed` attribute
+    onPressed: callback,
+    color: Colors.purple,
+    child: Padding(
+      padding: EdgeInsets.all(10.0),
+      child: Text(
+        "Get a new name",
+        style: TextStyle(fontSize: 30, color: Colors.white),
+      )
+    )
+  )
+);
 
