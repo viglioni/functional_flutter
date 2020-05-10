@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import './routes/startup_name.dart';
+import 'package:functionalflutter/routes/startup_name.dart';
 import 'package:flutter/foundation.dart';
 import 'dart:developer';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
-import './states/states.dart';
-import './aux_funcs/aux_funcs.dart';
-import './routes/routes.dart';
+import 'package:functionalflutter/states/states.dart';
+import 'package:functionalflutter/aux_funcs/aux_funcs.dart';
+import 'package:functionalflutter/routes/routes.dart';
 
 void main() => runApp(builder());
 
