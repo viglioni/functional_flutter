@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 
 Function initializeState = (Map stateMap) => Store<Map>(appReducer, initialState: stateMap);
 
-enum StateActions { GetNewName, CounterPP }
+enum StateActions { GetNewName }
 
 Map appReducer (Map state, dynamic action) {
   switch(action){
@@ -18,8 +18,9 @@ Map appReducer (Map state, dynamic action) {
     break;
     default: {
       return state;
-}}}
-
+    }
+  }
+}
 
 
 Widget useStateWidget(String stateName, Function widget, {Function stateConverter = identity}) =>

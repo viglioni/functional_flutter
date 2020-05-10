@@ -8,7 +8,18 @@ final routes = MaterialApp(
     '/': (context) => HomePage(context),
     'startupname' : (context) => StartupName(context),
   },
-  theme: ThemeData(
-    primaryColor: Colors.purple,
-  )
-);
+  theme: ThemeData( primaryColor: Colors.purple ));
+
+
+
+Widget goToRoute(context, route, text) =>
+Padding (
+  padding: EdgeInsets.all(10.0),
+  child: RaisedButton (
+    onPressed: () => Navigator.pushNamed(context, route),
+    color: Colors.purple,
+    child: Padding(
+      padding: EdgeInsets.all(10.0),
+      child: Text(
+        text,
+        style: TextStyle(fontSize: 30, color: Colors.white)))));

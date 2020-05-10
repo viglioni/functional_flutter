@@ -8,7 +8,7 @@ import 'package:functionalflutter/aux_funcs/aux_funcs.dart';
 
 
 Scaffold StartupName(context) => Scaffold(
-  appBar: AppBar(title: Text("random startup names")),
+  appBar: AppBar(title: Text("Random StartUp Names")),
   body: Center(
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -42,7 +42,6 @@ final namesCounter = useStateWidget(
 final getNewNameButton =  setStateWidget(
   StateActions.GetNewName,
   (callback) => RaisedButton(
-    // Attach the `callback` to the `onPressed` attribute
     onPressed: callback,
     color: Colors.purple,
     child: Padding(
