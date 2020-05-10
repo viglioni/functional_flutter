@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:functionalflutter/routes/startup_name.dart';
+import 'package:functionalflutter/routes/startup_name/startup_name.dart';
 import 'package:functionalflutter/routes/home.dart';
 
 final routes = MaterialApp(
