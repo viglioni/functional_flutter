@@ -8,7 +8,8 @@ Scaffold HomePage(context) => Scaffold(
   body: Center( child:
     Column (
       children: [
-        goToRoute (context, "startupname", "StartUp Names"),
+        goToRoute (context, "/startupname", "StartUp Names"),
+        goToRoute (context, "/animatewidget", "Animate Widget"),
       ]
 )));
 

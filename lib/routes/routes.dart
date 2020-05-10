@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:functionalflutter/routes/startup_name/startup_name.dart';
 import 'package:functionalflutter/routes/home.dart';
+import 'package:functionalflutter/routes/animate_widget/animate_widget.dart';
 
 final routes = MaterialApp(
-  initialRoute: '/',
+  initialRoute: '/animatewidget',
   routes: {
     '/': (context) => HomePage(context),
-    'startupname' : (context) => StartupName(context),
+    '/startupname' : (context) => StartupName(context),
+    '/animatewidget' : (context) => AnimateWidget (context),
+
   },
   theme: ThemeData( primaryColor: Colors.purple ));
 
