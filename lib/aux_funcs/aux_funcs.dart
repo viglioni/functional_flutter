@@ -6,3 +6,7 @@ String getRandomStartUpName() => WordPair.random().asPascalCase;
 
 // identity function
 T identity<T> (T x) => x;
+
+
+// wait
+Future<void> wait (seconds) async => await Future.delayed(Duration(seconds: seconds));

@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:functionalflutter/routes/startup_name/startup_name.dart';
 import 'package:functionalflutter/routes/home.dart';
+import 'package:functionalflutter/routes/stream_counter/stream_counter.dart';
+
 
 final routes = MaterialApp(
-  initialRoute: '/',
+  initialRoute: 'streamcounter',
   routes: {
     '/': (context) => HomePage(context),
     'startupname' : (context) => StartupName(context),
+    'streamcounter' : (context) => StreamCounter(context),
   },
   theme: ThemeData( primaryColor: Colors.purple ));
 

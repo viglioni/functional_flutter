@@ -9,6 +9,7 @@ Scaffold HomePage(context) => Scaffold(
     Column (
       children: [
         goToRoute (context, "startupname", "StartUp Names"),
+        goToRoute (context, "streamcounter", "Stream Counter"),
       ]
 )));
 
