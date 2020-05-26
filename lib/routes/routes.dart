@@ -5,7 +5,7 @@ import 'package:functionalflutter/routes/stream_counter/stream_counter.dart';
 
 
 final routes = MaterialApp(
-  initialRoute: 'streamcounter',
+  initialRoute: '/',
   routes: {
     '/': (context) => HomePage(context),
     'startupname' : (context) => StartupName(context),
